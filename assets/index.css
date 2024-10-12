@@ -55,3 +55,7 @@ img {
   padding-bottom: 15px;
 }
 
+.sold-out {
+  opacity: 0.5; /* Makes the text appear faded */
+  text-decoration: line-through; /* Optional: adds a line through the text */
+}
