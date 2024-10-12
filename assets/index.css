@@ -47,9 +47,11 @@ body {
 }
 
 img {
-  max-width: 25vw;
+  max-width: 100%; /* Ensures responsiveness */
+  height: auto; /* Maintain aspect ratio */
 }
 
 #film-info {
   padding-bottom: 15px;
 }
+
