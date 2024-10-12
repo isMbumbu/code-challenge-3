@@ -3,7 +3,7 @@ fetch('http://localhost:3000/films')
   .then(response => response.json())
   .then(films => {
     const filmsList = document.getElementById('films');
-    
+
     // Populate the films list
     films.forEach(film => {
       const li = document.createElement('li');
@@ -11,7 +11,7 @@ fetch('http://localhost:3000/films')
       li.setAttribute('data-id', film.id);
       li.textContent = film.title;
       filmsList.appendChild(li);
-      
+
       // Add click event listener for each film item
       li.addEventListener('click', () => {
         displayMovieDetails(film);
@@ -60,7 +60,7 @@ function displayMovieDetails(movie) {
       currentTickets -= 1; // Decrease ticket count
       ticketNumSpan.textContent = currentTickets; // Update displayed count
 
-      // Check if sold out
+      // Update the button if sold out
       if (currentTickets === 0) {
         buyTicketButton.disabled = true;
         buyTicketButton.textContent = "Sold Out";
@@ -68,3 +68,4 @@ function displayMovieDetails(movie) {
     }
   });
 }
+
