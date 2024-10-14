@@ -1,5 +1,5 @@
 // Fetch the films from the JSON server
-fetch('http://localhost:3000/films')
+fetch('https://code-challenge-3-2-xfoq.onrender.com/films')
   .then(response => response.json())
   .then(films => {
     const filmsList = document.getElementById('films');
@@ -91,7 +91,7 @@ function displayMovieDetails(movie) {
       }
 
       // Update tickets_sold on the server
-      fetch(`http://localhost:3000/films/${movie.id}`, {
+      fetch(`https://code-challenge-3-2-xfoq.onrender.com/films/${movie.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
@@ -108,7 +108,7 @@ function displayMovieDetails(movie) {
 // Function to delete a film
 function deleteFilm(id, li) {
     if (confirm("Are you sure you want to delete this movie?")) {
-      fetch(`http://localhost:3000/films/${id}`, {
+      fetch(`https://code-challenge-3-2-xfoq.onrender.com/films/${id}`, {
         method: 'DELETE'
       })
       .then(() => {
