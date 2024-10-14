@@ -4,11 +4,18 @@
   "description": "Flatiron Movie Theater is open for business! You will be building out an application, Flatdango, that allows a user to purchase movie tickets from the theater.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "db-json": "^0.1.0"
-  }
+  },
+
+    "devDependencies": {
+      "nodemon": "^2.0.7"
+    }
+  
 }
